@@ -1,0 +1,8 @@
+1.正常登录SSH
+2.输入 SSH 登录命令：ssh -Y wheeltec@192.168.0.100
+如果提示错误，输入：ssh-keygen -f "/home/passoni/.ssh/known_hosts" -R
+"192.168.0.100" 然后输入 Y 然后回车
+输入机器人底盘初始化命令：roslaunch turn_on_wheeltec_robot
+turn_on_wheeltec_robot.launch
+3.输入 SSH 登录命令：ssh -Y wheeltec@192.168.0.100
+输入键盘控制命令：roslaunch wheeltec_robot_rc keyboard_teleop.launch

@@ -1,0 +1,4 @@
+1.输入ssh -Ywheeltec@192.168.0.100
+如果提示错误，输入：
+ssh-keygen-f"/home/passoni/.ssh/known_hosts"-R "192.168.0.100"
+2.

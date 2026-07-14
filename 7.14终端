@@ -1,0 +1,214 @@
+wheeltec@galactic:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN group default qlen 1000
+    link/ether 00:0c:29:78:8e:60 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.0.230/24 brd 192.168.0.255 scope global dynamic noprefixroute ens33
+       valid_lft 3245sec preferred_lft 3245sec
+    inet6 fe80::a6a4:1046:ed59:64a5/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+wheeltec@galactic:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            904M     0  904M   0% /dev
+tmpfs           188M  1.7M  186M   1% /run
+/dev/sda5        24G   14G  9.6G  59% /
+tmpfs           939M     0  939M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           939M     0  939M   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop1       56M   56M     0 100% /snap/core18/2409
+/dev/loop2       56M   56M     0 100% /snap/core18/2538
+/dev/loop3       62M   62M     0 100% /snap/core20/1518
+/dev/loop4       62M   62M     0 100% /snap/core20/1587
+/dev/loop5       74M   74M     0 100% /snap/core22/2411
+/dev/loop6      219M  219M     0 100% /snap/gnome-3-34-1804/93
+/dev/loop7      219M  219M     0 100% /snap/gnome-3-34-1804/77
+/dev/loop8      401M  401M     0 100% /snap/gnome-3-38-2004/112
+/dev/loop9      350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/loop10      92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop12     151M  151M     0 100% /snap/remmina/5379
+/dev/loop11      82M   82M     0 100% /snap/gtk-common-themes/1534
+/dev/loop13     138M  138M     0 100% /snap/remmina/7392
+/dev/loop14      51M   51M     0 100% /snap/snap-store/547
+/dev/loop15      55M   55M     0 100% /snap/snap-store/558
+/dev/loop16      47M   47M     0 100% /snap/snapd/16292
+/dev/loop17      47M   47M     0 100% /snap/snapd/16010
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           188M   32K  188M   1% /run/user/1000
+wheeltec@galactic:~$ ./nfs.sh
+[sudo] password for wheeltec: 
+mount.nfs: access denied by server while mounting 192.168.0.100:/home/wheeltec/wheeltec_robot
+wheeltec@galactic:~$ df.h
+df.h: command not found
+wheeltec@galactic:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            904M     0  904M   0% /dev
+tmpfs           188M  1.7M  186M   1% /run
+/dev/sda5        24G   14G  9.6G  59% /
+tmpfs           939M     0  939M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           939M     0  939M   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop1       56M   56M     0 100% /snap/core18/2409
+/dev/loop2       56M   56M     0 100% /snap/core18/2538
+/dev/loop3       62M   62M     0 100% /snap/core20/1518
+/dev/loop4       62M   62M     0 100% /snap/core20/1587
+/dev/loop5       74M   74M     0 100% /snap/core22/2411
+/dev/loop6      219M  219M     0 100% /snap/gnome-3-34-1804/93
+/dev/loop7      219M  219M     0 100% /snap/gnome-3-34-1804/77
+/dev/loop8      401M  401M     0 100% /snap/gnome-3-38-2004/112
+/dev/loop9      350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/loop10      92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop12     151M  151M     0 100% /snap/remmina/5379
+/dev/loop11      82M   82M     0 100% /snap/gtk-common-themes/1534
+/dev/loop13     138M  138M     0 100% /snap/remmina/7392
+/dev/loop14      51M   51M     0 100% /snap/snap-store/547
+/dev/loop15      55M   55M     0 100% /snap/snap-store/558
+/dev/loop16      47M   47M     0 100% /snap/snapd/16292
+/dev/loop17      47M   47M     0 100% /snap/snapd/16010
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           188M   32K  188M   1% /run/user/1000
+wheeltec@galactic:~$ su
+Password: 
+root@galactic:/home/wheeltec# nano nfs.sh
+root@galactic:/home/wheeltec# exit
+exit
+wheeltec@galactic:~$ ./nfs.sh
+mount.nfs: access denied by server while mounting 192.168.0.100:/home/wheeltec/wheeltec_robot
+wheeltec@galactic:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            904M     0  904M   0% /dev
+tmpfs           188M  1.7M  186M   1% /run
+/dev/sda5        24G   14G  9.6G  59% /
+tmpfs           939M     0  939M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           939M     0  939M   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop1       56M   56M     0 100% /snap/core18/2409
+/dev/loop2       56M   56M     0 100% /snap/core18/2538
+/dev/loop3       62M   62M     0 100% /snap/core20/1518
+/dev/loop4       62M   62M     0 100% /snap/core20/1587
+/dev/loop5       74M   74M     0 100% /snap/core22/2411
+/dev/loop6      219M  219M     0 100% /snap/gnome-3-34-1804/93
+/dev/loop7      219M  219M     0 100% /snap/gnome-3-34-1804/77
+/dev/loop8      401M  401M     0 100% /snap/gnome-3-38-2004/112
+/dev/loop9      350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/loop10      92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop12     151M  151M     0 100% /snap/remmina/5379
+/dev/loop11      82M   82M     0 100% /snap/gtk-common-themes/1534
+/dev/loop13     138M  138M     0 100% /snap/remmina/7392
+/dev/loop14      51M   51M     0 100% /snap/snap-store/547
+/dev/loop15      55M   55M     0 100% /snap/snap-store/558
+/dev/loop16      47M   47M     0 100% /snap/snapd/16292
+/dev/loop17      47M   47M     0 100% /snap/snapd/16010
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           188M   32K  188M   1% /run/user/1000
+wheeltec@galactic:~$ 
+wheeltec@galactic:~$ #!/bin/sh
+wheeltec@galactic:~$ sudo mount -t nfs 192.168.0.100:/home/wheeltec/wheeltec_robot /mnt
+mount.nfs: access denied by server while mounting 192.168.0.100:/home/wheeltec/wheeltec_robot
+wheeltec@galactic:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            904M     0  904M   0% /dev
+tmpfs           188M  1.7M  186M   1% /run
+/dev/sda5        24G   14G  9.6G  59% /
+tmpfs           939M     0  939M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           939M     0  939M   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop1       56M   56M     0 100% /snap/core18/2409
+/dev/loop2       56M   56M     0 100% /snap/core18/2538
+/dev/loop3       62M   62M     0 100% /snap/core20/1518
+/dev/loop4       62M   62M     0 100% /snap/core20/1587
+/dev/loop5       74M   74M     0 100% /snap/core22/2411
+/dev/loop6      219M  219M     0 100% /snap/gnome-3-34-1804/93
+/dev/loop7      219M  219M     0 100% /snap/gnome-3-34-1804/77
+/dev/loop8      401M  401M     0 100% /snap/gnome-3-38-2004/112
+/dev/loop9      350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/loop10      92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop12     151M  151M     0 100% /snap/remmina/5379
+/dev/loop11      82M   82M     0 100% /snap/gtk-common-themes/1534
+/dev/loop13     138M  138M     0 100% /snap/remmina/7392
+/dev/loop14      51M   51M     0 100% /snap/snap-store/547
+/dev/loop15      55M   55M     0 100% /snap/snap-store/558
+/dev/loop16      47M   47M     0 100% /snap/snapd/16292
+/dev/loop17      47M   47M     0 100% /snap/snapd/16010
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           188M   32K  188M   1% /run/user/1000
+wheeltec@galactic:~$ nano nfs.sh
+wheeltec@galactic:~$ cat /etc/exports
+# /etc/exports: the access control list for filesystems which may be exported
+#		to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+#
+wheeltec@galactic:~$ sudo exports -v
+sudo: exports: command not found
+wheeltec@galactic:~$ sudo exportfs -v
+wheeltec@galactic:~$ sudo systemctl status nfs-kernel-server
+● nfs-server.service - NFS server and services
+     Loaded: loaded (/lib/systemd/system/nfs-server.service; enabled; vendor preset: enabled)
+     Active: active (exited) since Tue 2026-07-14 20:35:27 CST; 1h 10min ago
+    Process: 1143 ExecStartPre=/usr/sbin/exportfs -r (code=exited, status=0/SUCCESS)
+    Process: 1146 ExecStart=/usr/sbin/rpc.nfsd $RPCNFSDARGS (code=exited, status=0/SUCCESS)
+   Main PID: 1146 (code=exited, status=0/SUCCESS)
+
+Jul 14 20:35:24 galactic systemd[1]: Starting NFS server and services...
+Jul 14 20:35:27 galactic systemd[1]: Finished NFS server and services.
+wheeltec@galactic:~$ sudo /etc/init.d/nfs-kernel-server start 
+Starting nfs-kernel-server (via systemctl): nfs-kernel-server.service.
+wheeltec@galactic:~$ sudo  /etc/init.d/nfs-kernel-server restart 
+Restarting nfs-kernel-server (via systemctl): nfs-kernel-server.service.
+wheeltec@galactic:~$ sudo systemctl status nfs-kernel-server
+● nfs-server.service - NFS server and services
+     Loaded: loaded (/lib/systemd/system/nfs-server.service; enabled; vendor preset: enabled)
+     Active: active (exited) since Tue 2026-07-14 21:47:36 CST; 13s ago
+    Process: 4571 ExecStartPre=/usr/sbin/exportfs -r (code=exited, status=0/SUCCESS)
+    Process: 4572 ExecStart=/usr/sbin/rpc.nfsd $RPCNFSDARGS (code=exited, status=0/SUCCESS)
+   Main PID: 4572 (code=exited, status=0/SUCCESS)
+
+Jul 14 21:47:35 galactic systemd[1]: Starting NFS server and services...
+Jul 14 21:47:36 galactic systemd[1]: Finished NFS server and services.
+wheeltec@galactic:~$ ./nfs.sh
+mount.nfs: access denied by server while mounting 192.168.0.100:/home/wheeltec/wheeltec_robot
+wheeltec@galactic:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            904M     0  904M   0% /dev
+tmpfs           188M  1.7M  186M   1% /run
+/dev/sda5        24G   14G  9.6G  59% /
+tmpfs           939M     0  939M   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           939M     0  939M   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop1       56M   56M     0 100% /snap/core18/2409
+/dev/loop2       56M   56M     0 100% /snap/core18/2538
+/dev/loop3       62M   62M     0 100% /snap/core20/1518
+/dev/loop4       62M   62M     0 100% /snap/core20/1587
+/dev/loop5       74M   74M     0 100% /snap/core22/2411
+/dev/loop6      219M  219M     0 100% /snap/gnome-3-34-1804/93
+/dev/loop7      219M  219M     0 100% /snap/gnome-3-34-1804/77
+/dev/loop8      401M  401M     0 100% /snap/gnome-3-38-2004/112
+/dev/loop9      350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/loop10      92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop12     151M  151M     0 100% /snap/remmina/5379
+/dev/loop11      82M   82M     0 100% /snap/gtk-common-themes/1534
+/dev/loop13     138M  138M     0 100% /snap/remmina/7392
+/dev/loop14      51M   51M     0 100% /snap/snap-store/547
+/dev/loop15      55M   55M     0 100% /snap/snap-store/558
+/dev/loop16      47M   47M     0 100% /snap/snapd/16292
+/dev/loop17      47M   47M     0 100% /snap/snapd/16010
+/dev/sda1       511M  4.0K  511M   1% /boot/efi
+tmpfs           188M   32K  188M   1% /run/user/1000
+wheeltec@galactic:~$ ls /home/wheeltec
+build  clash  Desktop  Documents  Downloads  install  log  Music  nfs.sh  Pictures  Public  snap  start.sh  Templates  Videos  WHEELTEC.jpg  wheeltec_ros2  wheeltec_visual
+wheeltec@galactic:~$

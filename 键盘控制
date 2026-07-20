@@ -1,0 +1,25 @@
+wheeltec@galactic:~$ ssh -Y @192.168.0.100//远程连接
+wheeltec@192.168.0.100's password: 
+wheeltec@wheeltec:~$ ros2_start//之前一直没成功，是因为没有进入到ROS2容器，此命令进入容器
+ros2
+wheeltec@wheeltec:~$ ros2
+root@wheeltec:/# ros2 run wheeltec_robot_keyboard wheeltec_keyboard
+
+Control Your carrrrrrrrrr!
+---------------------------
+Moving around:
+   u    i    o
+   j    k    l
+   m    ,    .
+
+q/z : increase/decrease max speeds by 10%
+w/x : increase/decrease only linear speed by 10%
+e/c : increase/decrease only angular speed by 10%
+space key, k : force stop
+anything else : stop smoothly
+b : switch to OmniMode/CommonMode
+CTRL-C to quit
+
+currently:	speed 0.2	 turn 1.0 
+None
+如果要使用无线键盘，接收器在电池后面，插到板子上
